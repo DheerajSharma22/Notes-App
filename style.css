@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bgColor: #202124;
+  --yellow: #fbbc04;
+  --blueColor: #0095ff;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bgColor);
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 8rem;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.navbar .logoDiv {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .logoDiv img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.navbar .logoDiv .logo {
+  color: white;
+  font-size: 3rem;
+}
+
+.navbar i {
+  color: white;
+  font-size: 2rem;
+  background-color: var(--yellow);
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.notesDiv {
+  padding: 2rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.notesDiv .noteCard {
+  max-width: 30rem;
+  border: 1px solid #666;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.notesDiv .noteCard .noteHeading {
+  font-size: 2rem;
+}
+
+.notesDiv .noteCard .noteContent {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ededed;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.notesDiv .noteCard .menuButtons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notesDiv .noteCard .menuButtons i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Modal starts here */
+#modal_wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 3s ease-in-out;
+  display: none;
+}
+
+.active {
+  display: flex !important;
+}
+
+.modalContainer {
+  background-color: #202124;
+  width: 56rem;
+  height: 50rem;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 0.4rem;
+  transition: all 3s ease-in-out;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.modalContainer .modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.modalContainer .modalHeader input,
+textarea {
+  width: 100%;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+#noteDesc {
+  height: 38rem;
+  resize: none;
+}
+
+.modalContainer .modalHeader i {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#modal_wrapper.active .modalContainer {
+  transform: translateY(0px);
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnYellow {
+  padding: 1rem 2rem;
+  background-color: #fbbc04;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+
+.btnYellow:hover {
+  background-color: #fbbd04b9;
+}
